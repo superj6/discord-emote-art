@@ -4,178 +4,183 @@ a: |+
   xxx
   x.x
   x.x
-
 b: |+
   xx.
   x.x
   xxx
   x.x
   xx.
-
 c: |+
   xxx
   x..
   x..
   x..
   xxx
-
 d: |+
   xx.
   x.x
   x.x
   x.x
   xx.
-
 e: |+
   xxx
   x..
   xxx
   x..
   xxx
-
 f: |+
   xxx
   x..
   xxx
   x..
   x..
-
 g: |+
   xxx
   x..
   x.x
   x.x
   xxx
-
 h: |+
   x.x
   x.x
   xxx
   x.x
   x.x
-
 i: |+
   xxx
   .x.
   .x.
   .x.
   xxx
-
 j: |+
   xxx
   .x.
   .x.
   .x.
   xx.
-
 k: |+
   x.x
   xx.
   x..
   xx.
   x.x
-
 l: |+ 
   x..
   x..
   x..
   x..
-  xx
-
+  xxx
 m: |+
   xxx
   xxx
   x.x
   x.x
   x.x
-
 n: |+
   xxx
   x.x
   x.x
   x.x
   x.x
-
 o: |+
   xxx
   x.x
   x.x
   x.x
   xxx
-
 p: |+
   xx.
   x.x
   xx.
   x..
   x..
-
 q: |+
   xxx
   x.x
   x.x
   xxx
   xxx
-
 r: |+
   xx.
   x.x
   xx.
   x.x
   x.x
-
 s: |+
   xxx
   x..
   xxx
   ..x
   xxx
-
 t: |+
   xxx
   .x.
   .x.
   .x.
   .x.
-
 u: |+
   x.x
   x.x
   x.x
   x.x
   xxx
-
 v: |+
   x.x
   x.x
   x.x
   x.x
   .x.
-
 w: |+
   x.x
   x.x
   x.x
   xxx
   xxx
-
 x: |+
   x.x
   x.x
   .x.
   x.x
   x.x
-
 y: |+
   x.x
   x.x
   .x.
   .x.
   .x.
-
 z: |+
   xxx
   ..x
   .x.
   x..
   xxx
+" ": |+
+  ...
+  ...
+  ...
+  ...
+  ...
+"!": |+
+  .x.
+  .x.
+  .x.
+  ...
+  .x.
+"?": |+
+  xxx
+  ..x
+  .x.
+  ...
+  .x.
+".": |+
+  ...
+  ...
+  ...
+  ...
+  .x.
+"-": |+
+  ...
+  ...
+  xxx
+  ...
+  ...
