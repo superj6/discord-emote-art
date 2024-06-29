@@ -36,7 +36,7 @@ async def emojitext(ctx, emoji: str, phrase: str, spacelen: int = 6):
 
         t = tt
 
-        if len(messages) > 5:
+        if len(messages) > 3:
             await ctx.send('too long message!')
             return
 
