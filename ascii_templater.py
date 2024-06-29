@@ -20,5 +20,23 @@ for k, v in ascii_templates.items():
             .replace('.', '{spacer}')\
             .replace('x', '{template_char}')
 
-def get_ascii_template(letter, spacer, template_char):
+def has_template(letter):
+    return letter in ascii_templates
+
+def fill_template(letter, spacer, template_char):
     return ascii_templates[letter].format(spacer = spacer, template_char = template_char)
+
+def fill_template(phrase, spacer, template_char):
+    ret = ''
+    for i in range(5):
+        for letter in filt_phrase[t:tt]:
+            ret += get_ascii_template(letter, spacer, emoji) 
+            ret += ' ' * 3
+
+        ret += '\n'
+
+    if ret[0] == ' ':
+        ret = '.' + ret[1:]
+
+    return ret
+
