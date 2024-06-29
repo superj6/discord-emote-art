@@ -26,11 +26,11 @@ def has_template(letter):
 def fill_template(letter, spacer, template_char):
     return ascii_templates[letter].format(spacer = spacer, template_char = template_char)
 
-def fill_template(phrase, spacer, template_char):
+def fill_template_phrase(phrase, spacer, template_char):
     ret = ''
     for i in range(5):
-        for letter in filt_phrase[t:tt]:
-            ret += get_ascii_template(letter, spacer, emoji) 
+        for letter in phrase:
+            ret += fill_template(letter, spacer, template_char).splitlines()[i]
             ret += ' ' * 3
 
         ret += '\n'
