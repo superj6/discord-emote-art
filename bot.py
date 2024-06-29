@@ -1,4 +1,4 @@
-from ascii_templater import ascii_templates
+import ascii_templater as temper
 
 import discord
 from discord.ext import commands
@@ -19,24 +19,29 @@ async def on_ready():
 
 @bot.command()
 async def emojitext(ctx, emoji: str, phrase: str, spacelen: int = 6):
-    ret = ''
+    spacer = ' ' * spacelen
 
-    filtered_phrase = ''.join(letter.lower() if letter.lower() in ascii_templates else '-' for letter in phrase)
+    filt_phrase = ''.join(letter.lower() if temper.has_template(letter.lower()) else '-' for letter in phrase)
 
-    for i in range(5):
-        for letter in filtered_phrase:
-            ret += \
-                    ascii_templates[letter]\
-                    .splitlines()[i]\
-                    .format(spacer = ' ' * spacelen, template_char = emoji)
-            ret += ' ' * 3
+    t = 0
+    messages = []
+    while t < len(filt_phrase):
+        tt = t
+        while tt < len(filt_phrase) \
+                and tt - t < 15 \
+                and len(temper.fill_template_phrase(filt_phrase[t:tt + 1], spacer, emoji)) < 2000:
+            tt += 1
+        
+        messages.append(temper.fill_template_phrase(filt_phrase[t:tt], spacer, emoji))
 
-        ret += '\n'
+        t = tt
 
-    if ret[0] == ' ':
-        ret = '.' + ret[1:]
+        if len(messages) > 3:
+            await ctx.send('too long message!')
+            return
 
-    await ctx.send(ret)
+    for message in messages:
+        await ctx.send(message)
 
 bot.run(os.environ['DISCORD_TOKEN'])
 
