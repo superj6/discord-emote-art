@@ -38,5 +38,8 @@ def fill_template_phrase(phrase, spacer, template_char):
     if ret[0] == ' ':
         ret = '.' + ret[1:]
 
+    if ret.splitlines()[-1].isspace():
+        ret = ret[:-1] + '.'
+
     return ret
 
