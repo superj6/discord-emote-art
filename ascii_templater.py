@@ -19,3 +19,6 @@ for k, v in ascii_templates.items():
             ascii_templates[k]\
             .replace('.', '{spacer}')\
             .replace('x', '{template_char}')
+
+def get_ascii_template(letter, spacer, template_char):
+    return ascii_templates[letter].format(spacer = spacer, template_char = template_char)
